@@ -54,6 +54,23 @@ This project implements and compares four distinct DRL "brains" to determine whi
 *   **Concept**: The most advanced model in this project. It uses a specialized mathematical "clip" to prevent the brain from changing too drastically at once. This keeps the learning stable and smooth.
 *   **Best For**: **Complex Environments (Env 3 & 4)**. PPO is the "gold standard" for this work and is the only model that consistently succeeds in building the largest 13-component structures.
 
+### E. Model Architecture (The "Brain" Structure)
+While the learning *algorithms* differ, they all share a similar **Deep Neural Network** architecture (specifically a Multi-Layer Perceptron):
+
+*   **Input (Observations)**: It takes in a tensor representing the 3D voxel grid. Each voxel tells the model:
+    *   Is there a component here?
+    *   Is this the target location?
+    *   Is this voxel part of the yard or construction area?
+*   **Hidden Layers**: By default, the brain uses two hidden layers with **256 neurons** each. These layers process the 3D data to find patterns.
+*   **Output (Actions)**: It outputs a probability for each of the **6 possible crane actions**:
+    1. Forward
+    2. Backward
+    3. Left
+    4. Right
+    5. Up
+    6. Down
+
+
 ---
 
 ## 4. Requirements & Setup
