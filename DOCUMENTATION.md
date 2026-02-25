@@ -13,6 +13,7 @@ I will use the following configurations for the training session:
 1. **Steps**: 200 epochs x 10,000 steps per epoch = **2,000,000 total steps**.
 2. **Checkpointing**: Enabled via `--save-ckpt` to ensure the final policy is saved to `log/ppo_logs/.../policy.pth`.
 3. **WandB Bypass**: Use the `WANDB_MODE=disabled` environment variable to prevent login prompts.
+4. **Environment Fix**: The script has been updated to use `DummyVectorEnv` for stability on Windows systems, bypassing issues with multiprocessing hangs.
 
 ### Execution Command
 ```powershell

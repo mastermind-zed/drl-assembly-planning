@@ -62,11 +62,11 @@ def test_ppo(args=get_args()):
     args.state_shape = env.observation_space.shape or env.observation_space.n
     args.action_shape = env.action_space.shape or env.action_space.n
     # create the training and test environment
-    train_envs = ShmemVectorEnv(
+    train_envs = SubprocVectorEnv(
         [lambda: Construct3DEnvObs(env_id=args.env_id, task_id=args.task_id, normalise=args.norm_obs) for _ in range(args.training_num)]
     )
     # test_envs = gym.make(args.task)
-    test_envs = ShmemVectorEnv(
+    test_envs = SubprocVectorEnv(
         [lambda: Construct3DEnvObs(env_id=args.env_id, task_id=args.task_id, normalise=args.norm_obs) for _ in range(args.test_num)]
     )
     # should be N_FRAMES x H x W
