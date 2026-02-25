@@ -4,29 +4,7 @@ This document combines the task tracking, implementation planning, and verificat
 
 ---
 
-## 1. Task Checklist
-
-### Pushing to GitHub
-- [x] Locate Git and check repository status
-- [x] Initialize Git repository and commit changes
-- [x] Add all files and push to GitHub
-- [x] Add and commit changes
-- [x] Push to GitHub
-
-### Paper Comparison
-- [x] Read and analyze the provided PDF paper
-- [x] Compare paper methodology with current implementation
-- [x] Identify gaps in algorithms, environment, and metrics
-- [x] Provide summary report to user
-
-### Long Training Session
-- [x] Create implementation plan for 2M step training
-- [ ] Run long training session command
-- [ ] Verify training progress and checkpoint generation
-
----
-
-## 2. Implementation Plan: Long-Term Training (2M Steps)
+## 1. Implementation Plan: Long-Term Training (2M Steps)
 
 This plan outlines the steps to execute a 2-million-step training session using the PPO algorithm to match the performance benchmarks in the paper.
 
@@ -48,7 +26,7 @@ $env:WANDB_MODE="disabled"; .\.venv\Scripts\python.exe run_ppo_script.py --epoch
 
 ---
 
-## 3. Visualization Script Walkthrough
+## 2. Visualization Script Walkthrough
 
 I have fixed the `demo_visualisation.py` script to correctly load training checkpoints and handle command-line arguments.
 
