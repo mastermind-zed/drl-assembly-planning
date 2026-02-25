@@ -1,6 +1,6 @@
 # DRL Assembly Planning - Project Documentation
 
-This document combines the task tracking, implementation planning, and verification results for the DRL Assembly Planning project.
+This document combines the implementation planning, and verification results for the DRL Assembly Planning project.
 
 ---
 
