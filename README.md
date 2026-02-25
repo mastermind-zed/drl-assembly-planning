@@ -76,6 +76,13 @@ This project implements and compares four distinct DRL "brains" to determine whi
 
 ## 5. Training and Visualization
 
+### Basic Training (First Run)
+If you want to test if everything is working correctly without waiting for millions of steps, run a short training session (100k steps):
+```powershell
+# Short verification run (10 epochs x 10k steps)
+$env:WANDB_MODE="disabled"; .\.venv\Scripts\python.exe run_ppo_script.py --epoch 10 --step-per-epoch 10000 --save-ckpt --env-id 1 --task-id 1
+```
+
 ### Long-Term Training (Recommended)
 To reach the peak performance shown in the paper (2M steps):
 ```powershell
