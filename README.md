@@ -22,13 +22,22 @@ In traditional robotics, we use **fixed programming**. A human tells a robot: *"
 
 ## 2. How the Simulation Works
 
-The system translates a **Building Information Model (BIM)** into a 3D grid of voxels. 
+The simulation is a 3D environment that translates complex engineering data (BIM) into a playable "learning game."
 
-*   **The Playground**: The environment tracks the location of the crane, the raw components in the "Yard," and the target structure on the "Site."
-*   **The Rules**: We programmed real-world logic into the site. For example, a heavy Beam cannot stay in the air unless the Columns supporting it are already built and locked in place.
-*   **The Reward System**: The robot is "trained" using a score:
-    *   **Positive Points (+)**: Earned for correctly placing a component.
-    *   **Negative Points (-)**: Deducted for every move made (to encourage speed) and for crashing into obstacles.
+*   **The 3D Grid**: The world is a voxel-based grid (similar to a specialized version of Minecraft). It is divided into two distinct zones:
+    *   **The Yard**: The storage area where all raw prefabricated components (SCOs) are initially placed.
+    *   **The Construction Area**: The target site where the building must be erected according to the design.
+*   **The Components (SCOs)**: The environment primarily handles two types of structural elements:
+    *   **Columns**: Vertical supports that form the base of the structure.
+    *   **Beams**: Horizontal elements that connect columns.
+*   **The Rules (Civil Engineering Logic)**: The simulation isn't just a sandbox; it enforces real-world construction constraints:
+    *   **Assembly Sequence**: Columns must be placed and locked before any beams that rely on them can be installed.
+    *   **Collision Detection**: The crane cannot move through existing structures or obstacles; it must find a clear path.
+*   **The Brain (RL Agent)**: The AI "sees" the world as a 3D tensor and chooses one of **6 possible actions** at every step: *Forward, Backward, Left, Right, Up, or Down*.
+*   **The Reward System**: This is the "Teacher" that guides the learning:
+    *   **Efficiency Punishment**: The agent loses a small amount of points for every single move. This forces it to find the **shortest possible path**.
+    *   **Goal Reward**: The agent receives a large positive "treat" (points) only when a component is successfully and legally placed.
+    *   **Completion Bonus**: A final massive reward is given when the entire 13-component structure is finished.
 
 ---
 
