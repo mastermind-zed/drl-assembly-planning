@@ -121,4 +121,5 @@ Watch your trained model perform the assembly:
 ## 6. Analysis & Results
 According to the research paper, the **PPO** model achieves the highest success rate because it maintains stability even when the construction site is crowded with obstacles and many components. Use the `plot_tools` to compare the learning curves of different algorithms.
 
+
 **Paper**: [Deep Reinforcement Learning for Real-Time Assembly Planning in Robot-Based Prefabricated Construction.pdf](Deep_Reinforcement_Learning_for_Real-Time_Assembly_Planning_in_Robot-Based_Prefabricated_Construction.pdf)
