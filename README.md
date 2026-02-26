@@ -112,7 +112,7 @@ $env:WANDB_MODE="disabled"; .\.venv\Scripts\python.exe run_ppo_script.py --epoch
 
 ### Visualizing the Results
 Watch your trained model perform the assembly:
-```powershell
+```powershell1
 .\.venv\Scripts\python.exe demo_visualisation.py --env-id 1 --task-id 1 --algo ppo --ckpt-path log --render
 ```
 
