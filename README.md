@@ -72,7 +72,7 @@ While the learning *algorithms* differ, they all share a similar **Deep Neural N
     *   Is this voxel part of the yard or construction area?
 *   **Hidden Layers**: By default, the brain uses two hidden layers with **256 neurons** each. These layers process the 3D data to find patterns.
 *   **Output (Actions)**: It outputs a probability for each of the **6 possible crane actions**:
-*     1. Forward   2.Backward   3.Left   4.Right   5.Up   6.Down
+*     1. Forward   2. Backward   3.Left   4.Right   5.Up   6.Down
 
 
 ---
