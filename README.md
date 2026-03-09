@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning for Real-Time Assembly Planning  
+# Deep Reinforcement Learning for Real-Time Assembly Planning 
 
 This repository contains the implementation of a self-planning robotic framework for prefabricated construction, as described in the research paper: **"Deep Reinforcement Learning for Real-Time Assembly Planning in Robot-Based Prefabricated Construction"**.
 
